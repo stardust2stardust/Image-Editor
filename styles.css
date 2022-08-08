@@ -5,8 +5,35 @@
 
 body {
     background-color: darkgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
 h1 {
+    margin-top: 20px;
     color: black;
+}
+
+.container {
+    background-color: whitesmoke;
+    display: flex;
+    width: 400px;
+    justify-content: center;
+}
+
+.img-container {
+    height: 300px;
+}
+
+.controls-and-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons,
+.controls {
+    display: flex;
+    flex-direction: column;
 }
