@@ -7,20 +7,27 @@ function imageInfo (data) {
     const imageObj = {}
     imageObj.imgURL = data.urls.small;
     imageObj.photographerName = data.user.name;
-    imageObj.photograperLink = data.links.self
+    imageObj.photograperLink = data.links.html;
     imageObj.unpslashLink = 'https://unsplash.com/';
     displayImage(imageObj)
+    displayInfo(imageObj)
     return imageObj
 }
 
 function displayImage(obj) {
-   
     console.log(obj)
     const imgContainer = document.querySelector('.img-container')
     const image = document.createElement('img');
     image.classList.add('img');
     image.src = obj.imgURL
     imgContainer.appendChild(image)
+}
+
+function displayInfo(obj) {
+    const imgContainer = document.querySelector('.img-container');
+    const imageInfoDiv = document.createElement('div');
+    imageInfoDiv.innerHTML = `Photo by <a href="${obj.photograperLink}">${obj.photographerName}</a> on <a href="${obj.unpslashLink}">Unsplash</a>`
+    imgContainer.appendChild(imageInfoDiv)
 }
 
 function getImage () {

@@ -25,7 +25,8 @@ h1 {
 
 .img-container {
     height: 300px;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .img {
