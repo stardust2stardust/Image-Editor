@@ -27,6 +27,7 @@ function displayImage(imageObj) {
     console.log(imageObj)
     const imgContainer = document.querySelector('.img-container')
     const image = document.createElement('img');
+    image.classList.add('img');
     image.src = imageObj.url
     imgContainer.appendChild(image)
 }
