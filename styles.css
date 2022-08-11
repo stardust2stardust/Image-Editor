@@ -25,11 +25,12 @@ h1 {
 
 .img-container {
     height: 300px;
+
 }
 
 .img {
-    max-width: 400px;
-
+    max-height: 250px;
+    
 }
 
 .controls-and-buttons {
