@@ -1,6 +1,8 @@
 // DOM elements
 const newImageBtn = document.getElementById('new-image-btn');
 const brightnessBtn = document.getElementById('brightness');
+const grayscaleBtn = document.getElementById('grayscale');
+const borderBtn = document.getElementById('border');
 
 function testImage () {
     const imgContainer = document.querySelector('.img-container')
@@ -54,9 +56,24 @@ function applyBrightness () {
     const brightnessLevel = brightnessBtn.value 
     image.style.filter = `brightness(${brightnessLevel}%)`
     console.log(brightnessLevel)
+}
 
+function applyGrayScale () {
+    const image = document.querySelector('.img');
+    console.log('clicked')
+    const grayscaleLevel = grayscaleBtn.value 
+    image.style.filter = `grayscale(${grayscaleLevel}%)`
+    console.log(grayscaleLevel)
+}
+
+function applyBorder () {
+    const image = document.querySelector('.img');
+    const borderLevel = borderBtn.value;
+    image.style.border = `${borderLevel}px solid black`;
 }
 
 newImageBtn.addEventListener('click', testImage)
 // newImageBtn.addEventListener('click', getImage)
 brightnessBtn.addEventListener('change', applyBrightness)
+grayscaleBtn.addEventListener('change', applyGrayScale)
+borderBtn.addEventListener('change', applyBorder)
