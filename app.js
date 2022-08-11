@@ -15,8 +15,8 @@ function imageInfo (data) {
 }
 
 function displayImage(obj) {
-    console.log(obj)
     const imgContainer = document.querySelector('.img-container')
+    imgContainer.innerHTML = "";
     const image = document.createElement('img');
     image.classList.add('img');
     image.src = obj.imgURL
