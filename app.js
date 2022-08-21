@@ -1,7 +1,7 @@
 // DOM elements
 const newImageBtn = document.getElementById('new-image-btn');
 const resetImageBtn = document.getElementById('reset-image-btn');
-const saveImageBtn = document.getElementById('save-image-btn');
+
 const brightnessBtn = document.getElementById('brightness');
 const saturateBtn = document.getElementById('saturate');
 const borderBtn = document.getElementById('border');
@@ -80,11 +80,15 @@ function resetImage () {
     applyBorder();
     applyBrightness();
     applySaturation()
-
 }
 
+
+
+
+
 newImageBtn.addEventListener('click', testImage)
-resetImageBtn.addEventListener('click', resetImage)
+resetImageBtn.addEventListener('click', resetImage);
+
 // newImageBtn.addEventListener('click', getImage)
 brightnessBtn.addEventListener('change', applyBrightness)
 saturateBtn.addEventListener('change', applySaturation)
