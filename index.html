@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Image Editor</title>
 </head>
 <body>
@@ -17,7 +18,13 @@
     <div class="container get-image">
         <div class="buttons">
             <button id="new-image-btn">Random Image</button>
-            <input type="search" placeholder="search for an image">
+            <form>
+                <div>
+                  <input type="search" id="search" name="q">
+                  <button>Search</button>
+                </div>
+              </form>
+            <i class="fa fa-search"></i>
             
         </div>
     </div>

@@ -1,7 +1,7 @@
 // DOM elements
 const newImageBtn = document.getElementById('new-image-btn');
 const resetImageBtn = document.getElementById('reset-image-btn');
-
+const search = document.getElementById('search');
 const brightnessBtn = document.getElementById('brightness');
 const saturateBtn = document.getElementById('saturate');
 const borderBtn = document.getElementById('border');
@@ -82,13 +82,16 @@ function resetImage () {
     applySaturation()
 }
 
-
+function searchForImage () {
+    
+    console.log('searching...')
+}
 
 
 
 newImageBtn.addEventListener('click', testImage)
 resetImageBtn.addEventListener('click', resetImage);
-
+search.addEventListener('click', searchForImage)
 // newImageBtn.addEventListener('click', getImage)
 brightnessBtn.addEventListener('change', applyBrightness)
 saturateBtn.addEventListener('change', applySaturation)
