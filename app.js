@@ -1,5 +1,7 @@
 // DOM elements
 const newImageBtn = document.getElementById('new-image-btn');
+const resetImageBtn = document.getElementById('reset-image-btn');
+const saveImageBtn = document.getElementById('save-image-btn');
 const brightnessBtn = document.getElementById('brightness');
 const saturateBtn = document.getElementById('saturate');
 const borderBtn = document.getElementById('border');
@@ -7,6 +9,9 @@ const borderBtn = document.getElementById('border');
 function testImage () {
     const imgContainer = document.querySelector('.img-container')
     imgContainer.innerHTML = "";
+    brightnessBtn.value = 100;
+    saturateBtn.value= 100;
+    borderBtn.value = 10;
     const image = document.createElement('img');
     image.classList.add('img');
     image.src = "./images/photo-1658302640117-da5e9d9836cc.jpeg"
@@ -68,7 +73,18 @@ function applyBorder () {
     image.style.border = `${borderLevel}px solid black`;
 }
 
+function resetImage () {
+    brightnessBtn.value = 100;
+    saturateBtn.value= 100;
+    borderBtn.value = 10;
+    applyBorder();
+    applyBrightness();
+    applySaturation()
+
+}
+
 newImageBtn.addEventListener('click', testImage)
+resetImageBtn.addEventListener('click', resetImage)
 // newImageBtn.addEventListener('click', getImage)
 brightnessBtn.addEventListener('change', applyBrightness)
 saturateBtn.addEventListener('change', applySaturation)

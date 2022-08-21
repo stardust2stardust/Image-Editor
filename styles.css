@@ -31,7 +31,7 @@ h1 {
 
 .img {
     max-height: 250px;
-    
+    border: 10px solid black;
 }
 
 .controls-and-buttons {
